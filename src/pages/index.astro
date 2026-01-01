@@ -1,45 +1,43 @@
 ---
-// Product Data (You can later move this to a JSON file or CMS)
-const products = [
-  { id: 1, name: "Local Honey", price: "15.00", img: "via.placeholder.com" },
-  { id: 2, name: "Handmade Soap", price: "8.00", img: "via.placeholder.com" },
-  { id: 3, name: "Organic Tea", price: "12.00", img: "via.placeholder.com" },
-];
-
 const PHONE_NUMBER = "380991234567"; // Replace with your WhatsApp number
 ---
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Local Store</title>
+		<title>ХуторОК</title>
 		<style>
-			.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-			.card { border: 1px solid #ccc; padding: 15px; text-align: center; border-radius: 8px; }
-			button { background: #25D366; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 5px; }
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 20px;
+				padding: 20px;
+			}
+			.card {
+				border: 1px solid #ccc;
+				padding: 15px;
+				text-align: center;
+				border-radius: 8px;
+			}
+			button {
+				background: #25d366;
+				color: white;
+				border: none;
+				padding: 10px;
+				cursor: pointer;
+				border-radius: 5px;
+			}
 		</style>
 	</head>
 	<body>
-		<h1>Welcome to Our Shop</h1>
-		<div class="grid">
-			{products.map(item => (
-				<div class="card">
-					<img src={item.img} alt={item.name} />
-					<h3>{item.name}</h3>
-					<p>${item.price}</p>
-					<button onclick={`sendOrder('${item.name}', '${item.price}')`}>
-						Order via WhatsApp
-					</button>
-				</div>
-			))}
-		</div>
-
-		<script is:inline define:vars={{ PHONE_NUMBER }}>
-			window.sendOrder = (name, price) => {
-				const message = `Hello! I would like to buy ${name} for $${price}.`;
-				const url = `wa.me{PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
-				window.open(url, '_blank');
-			}
-		</script>
+		<h1>ХуторОК</h1>
+		<p>вулиця Вірменська, 29, Київ, 02121</p>
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3801.0285631153574!2d30.66798727918125!3d50.40849299094762!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5004a3102c1%3A0x8d1fdd5735b7128e!2z0L_RgNC-0LTRg9C60YLQvtCy0LjQuSDQvNCw0LPQsNC30LjQvSAi0KXRg9GC0L7RgNCe0Joi!5e0!3m2!1suk!2sua!4v1767275834305!5m2!1suk!2sua"
+			width="600"
+			height="450"
+			style="border:0;"
+			allowfullscreen=""
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</body>
 </html>

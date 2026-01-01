@@ -20,3 +20,17 @@ content:
         label: Preview image
         type: image
         description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+
+  - name: pages
+    label: Pages
+    type: collection
+    path: '_pages'
+    view:
+      fields: [ title ]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text

@@ -1,4 +1,3 @@
-media: media
 content:
   - name: config
     label: Jekyll config

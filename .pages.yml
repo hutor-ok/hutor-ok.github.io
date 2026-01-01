@@ -24,12 +24,7 @@ content:
     label: Pages
     type: collection
     path: '_pages'
-    view:
-      fields: [ title ]
     fields:
-      - name: title
-        label: Title
-        type: string
       - name: body
         label: Body
         type: rich-text

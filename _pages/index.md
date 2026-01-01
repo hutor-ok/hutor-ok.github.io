@@ -1,7 +1,5 @@
 ---
+layout: home
+permalink: /
 ---
 Hi
-
-Hello
-
-How you doing

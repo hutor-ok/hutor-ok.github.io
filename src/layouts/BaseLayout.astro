@@ -1,0 +1,27 @@
+---
+const { title = "Local Store" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+
+  <body>
+    <header class="container" style="padding:1.5rem 0; display:flex; justify-content:space-between;">
+      <strong>ХуторОК</strong>
+      <span style="color:var(--muted)">Завжди поруч</span>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="container" style="padding:3rem 0; color:var(--muted)">
+      © 2026 ХуторОК
+    </footer>
+  </body>
+</html>
